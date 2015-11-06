@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web assignment 1</title>
+<link rel="stylesheet" type="text/css" href="cssFile.css">
+</head>
+<body>
+
+<div id="header">
+<img id = "img" src="me.jpeg" alt="a picture of me">
+
+<h1>Assg.1: CSS, JavaScript, and Forms</h1>
+<p>Brought to you by: <br>
+<b><u>Georges Abi Khalil</u></b></p>
+</div>
+
+<div id="nav">
+<div id='drop-menu'>
+<ul>
+   <li><a href="index.html"><span>Home</span></a></li>
+   <li><a href="index.html"><span>About Me</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Courses</span></a>
+            <ul>
+               <li><a href='#'><span>CP1</span></a></li>
+               <li class='last'><a href='#'><span>CP2</span></a></li>
+			   <li class='last'><a href='#'><span>CP3</span></a></li>
+			   <li class='last'><a href='#'><span>Computer organization</span></a></li>
+			   <li class='last'><a href='#'><span>Web programming</span></a></li>
+			   <li class='last'><a href='#'><span>Database</span></a></li>
+			   <li class='last'><a href='#'><span>Operating systems</span></a></li>
+            </ul>
+         </li>
+         
+		  <li><a href="form.html"><span>Guest Book</span></a></li>
+            
+         </li>
+      </ul>
+   </li>
+   
+</ul>
+</div>
+</div>
+
+</div>
+
+
+<script>
+function func()
+{	var user, login, email, filter;
+
+user= document.getElementById("un").value;
+login= document.getElementById("ln").value;
+email= document.getElementById("em").value;
+filter= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if(user == null || user == "")
+	{
+		alert("first name is missing.");
+		return false;
+		}
+	else
+	 if(login == null || login == "")
+	{
+		alert("last name is missing.");	
+		return false;
+		
+		}
+		else
+		if(email==null || email=="")
+		{
+       		alert("email is missing");
+	        return false;
+			}
+			else
+			if(!filter.test(email))
+			{
+			   alert("please enter a valid email");
+			   return 0;
+			}
+}
+</script>
+
+
+<div id="section">
+<form  name="GuestBook"  action="login.php" method="post">
+
+<input required type="text" name="username" id="un" placeholder="User name"><br>
+<input required type="text" name="loginname" id="ln" placeholder="Login name"><br>
+<input required type="text" name="email" id="em" placeholder="Email"><br>
+<textarea name="message" rows="10" cols="30" placeholder="Message"></textarea><br>
+
+<input type="submit" value="Submit">
+</form>
+
+</div>
+
+
+<div id="footer">
+CSC 443, Assg 1, Fall 2015
+</div>
+
+</body>
+</html>

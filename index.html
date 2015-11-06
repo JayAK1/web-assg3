@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web assignment 3</title>
+<link rel="stylesheet" type="text/css" href="cssFile.css">
+
+</head>
+<body>
+
+<div id="header" class="sec">
+<img id = "img" src="me.jpeg" alt="a picture of me" onmouseover="imghover()">
+
+<h1>Assg.1: CSS, JavaScript, and Forms</h1>
+<p>Brought to you by: <br>
+<b><u>Georges Abi Khalil</u></b></p>
+</div>
+
+<div class="clear">
+</div>
+
+<div id="nav" class="sec">
+<div id='drop-menu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li><a href='#'><span>About Me</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Courses</span></a>
+            <ul>
+               <li><a href='#'><span>CP1</span></a></li>
+               <li class='last'><a href='#'><span>CP2</span></a></li>
+			   <li class='last'><a href='#'><span>CP3</span></a></li>
+			   <li class='last'><a href='#'><span>Computer organization</span></a></li>
+			   <li class='last'><a href='#'><span>Web programming</span></a></li>
+			   <li class='last'><a href='#'><span>Database</span></a></li>
+			   <li class='last'><a href='#'><span>Operating systems</span></a></li>
+            </ul>
+         </li>
+         
+		  <li><a href="form.html"><span>Guest Book</span></a></li>
+            
+         </li>
+      </ul>
+   </li>
+   
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="section" class="sec">
+<h4>&nbsp Welcome to my assignment 3 page.</h4>
+
+<button onclick="colors('red')">Red</button>
+<button onclick="colors('yellow')">Yellow</button>
+<button onclick="colors('green')">Green</button>
+<button onclick="colors('black')">Black</button>
+<button onclick="colors('silver')">Silver</button><br><br>
+
+<button onclick="rand()">Click me!</button>
+
+</div>
+
+
+<div id="ad" class="sec">
+<p>Google ad</p>
+</div>
+
+
+<div id="footer" class="sec">
+CSC 443, Assg 1, Fall 2015
+</div>
+
+<script>
+function colors(color){
+
+var sections = document.getElementsByClassName("sec");
+
+for(var i=0; i<sections.length; i++)
+	sections[i].style.background=color;
+}
+
+function imghover(){
+	alert("Why are you hovering?");
+}
+
+function rand(){
+   var arr = ["http://slashdot.org/", "http://www.thinkgeek.com/", "http://despair.com/", "http://www.redbubble.com/", "http://googleresearch.blogspot.com/", "https://developers.google.com/speed/libraries/"];
+   var i = parseInt(Math.random()*6);
+   window.location = arr[i];
+   
+}
+
+</script>
+
+
+</body>
+</html>
